@@ -1,0 +1,85 @@
+body{
+    height: 100svh;
+    background-color: hsl(0, 0%, 6%);
+    color: white;
+    font-family: 'Poppins';
+}
+
+.navbar{
+    background-color: hsl(0, 0%, 22%);
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    padding: 4px;
+}
+
+.navbar .logo{
+    color: rgb(160, 196, 255);
+    padding-left: 20px;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    text-shadow: 0px 0px 6px rgb(44, 0, 0);
+}
+
+.navbar ul{
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    padding-right: 20px;
+}
+
+.navbar ul a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.container{
+    height: 93%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.result{
+    height: 50px;
+    aspect-ratio: 4/1;
+    background-color: rgb(246, 215, 250);
+    border-radius: 12px;
+    border: 4px solid palevioletred;
+    border-width: 0px 4px 4px 4px;
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: rgb(3, 68, 70);
+    border-radius: 16px;
+    gap: 4px;
+}
+
+
+.board button{
+    height: clamp(100px,30vmin,200px);
+    aspect-ratio: 1/1;
+    background-color: rgb(153, 181, 198);
+
+    border-radius: 8px;
+    box-shadow: 0px 6px rgb(55, 81, 98);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.board button:hover{
+    background-color: hsl(202, 36%, 64%);
+}
+
+.board button:active{
+    transform: translateY(4px);
+    box-shadow: 0px 3px rgb(32, 47, 56);
+}

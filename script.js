@@ -78,9 +78,23 @@ function checkTie(board) {
   return board.every(cell => cell !== "");
 }
 
-Game.startGame("x","y");
-Game.playRound(0);
-Game.playRound(1);
-Game.playRound(4);
-Game.playRound(5);
-Game.playRound(8);
+const cells = document.querySelectorAll(".cell");
+
+function render() {
+  const board = Gameboard.getBoard();
+  cells.forEach((cell, index) => {
+    cell.textContent = board[index];
+  });
+}
+
+cells.forEach(cell => {
+  cell.addEventListener("click", () => {
+    const index = Number(cell.dataset.index);
+    Game.playRound(index);
+    render();
+  });
+});
+
+Game.startGame("Player 1", "Player 2");
+render();
+
