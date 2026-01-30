@@ -1,6 +1,6 @@
 body{
     height: 100vh;
-    background-color: hsl(0, 0%, 6%);
+    background-color: hsl(0, 0%, 10%);
     color: white;
     font-family: 'Poppins';
 }
@@ -13,6 +13,7 @@ body{
     top: 0;
     align-items: center;
     padding: 4px;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0);
 }
 
 .navbar .logo{
@@ -44,7 +45,16 @@ body{
     gap: 40px;
 }
 
+.top-hud{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
 .result{
+    height: 8vmin;
+    aspect-ratio: 5;
     padding: 8px;
     background-color: rgb(246, 215, 250);
     border-radius: 12px;
@@ -56,8 +66,21 @@ body{
     color: rgb(106, 0, 117);
     font-weight: bold;
     font-size: calc(1rem + 1vmin);
-    
 }
+
+button.restart{
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px gray;
+    font-weight: bold;
+}
+
+button.restart:active{
+    background-color: aliceblue;
+    box-shadow: 0px 2px hsl(0, 0%, 20%);
+    transform: translateY(2px);
+}
+
 .board{
     display: grid;
     grid-template-columns: repeat(3,1fr);

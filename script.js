@@ -1,4 +1,6 @@
 const result=document.querySelector(".result");
+const restartbtn=document.querySelector(".restart");
+//Gameboard module
 const Gameboard = (function () {
     let board = ["", "", "", "", "", "", "", "", ""];
 
@@ -24,6 +26,7 @@ function createPlayer(name, mark) {
     return { name, mark };
 }
 
+//Game Module
 const Game = (function () {
     let player1;
     let player2;
@@ -97,6 +100,11 @@ cells.forEach(cell => {
   });
 });
 
+restartbtn.addEventListener("click",()=>{
+  Gameboard.reset();
+  result.textContent='';
+  render();
+});
 Game.startGame("Player 1", "Player 2");
 render();
 
