@@ -1,3 +1,4 @@
+const result=document.querySelector(".result");
 const Gameboard = (function () {
     let board = ["", "", "", "", "", "", "", "", ""];
 
@@ -44,6 +45,7 @@ const Game = (function () {
         if (checkWin(board, currentPlayer.mark)) {
             gameOver = true;
             console.log(`${currentPlayer.name} wins!`);
+            result.textContent=`${currentPlayer.name} wins`;
             return;
   }
 
