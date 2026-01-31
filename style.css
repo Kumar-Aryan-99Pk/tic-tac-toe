@@ -1,5 +1,5 @@
 body{
-    height: 100vh;
+    height: 100svh;
     background-color: hsl(0, 0%, 10%);
     color: white;
     font-family: 'Poppins';
@@ -38,7 +38,7 @@ body{
 }
 
 .container{
-    padding-top: 20px;
+    padding-top: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,14 +49,14 @@ body{
 .top-hud{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 36px;
     justify-content: center;
     align-items: center;
 }
 .result{
     height: 8vmin;
     aspect-ratio: 5;
-    padding: 8px;
+    padding: 16px;
     background-color: rgb(246, 215, 250);
     border-radius: 12px;
     border: 4px solid palevioletred;

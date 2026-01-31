@@ -37,6 +37,7 @@ const Game = (function () {
         player1=createPlayer(name1,"X");
         player2=createPlayer(name2,"O");
         currentPlayer=player1;
+        gameOver=false;
         Gameboard.reset();
     }
 
@@ -101,8 +102,8 @@ cells.forEach(cell => {
 });
 
 restartbtn.addEventListener("click",()=>{
-  Gameboard.reset();
   result.textContent='';
+  Game.startGame("Player1","Player2");
   render();
 });
 Game.startGame("Player 1", "Player 2");
