@@ -48,14 +48,13 @@ const Game = (function () {
         const board=Gameboard.getBoard();
         if (checkWin(board, currentPlayer.mark)) {
             gameOver = true;
-            console.log(`${currentPlayer.name} wins!`);
             result.textContent=`${currentPlayer.name} wins`;
             return;
   }
 
         if (checkTie(board)) {
             gameOver = true;
-            console.log("It's a tie!");
+            result.textContent="Its a tie";
             return;
         }
         currentPlayer=currentPlayer===player1?player2:player1;
