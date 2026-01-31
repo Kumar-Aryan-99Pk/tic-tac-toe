@@ -22,6 +22,7 @@ body{
     font-size: calc(1rem + 1.5vmin);
     font-weight: bolder;
     text-shadow: 0px 0px 6px rgb(44, 0, 0);
+    white-space: nowrap;
 }
 
 .navbar ul{
@@ -37,7 +38,7 @@ body{
 }
 
 .container{
-    height: 93%;
+    padding-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,6 +66,7 @@ body{
     align-items: center;
     color: rgb(106, 0, 117);
     font-weight: bold;
+    white-space: nowrap;
     font-size: calc(1rem + 1vmin);
 }
 
